@@ -1,4 +1,4 @@
-<div class="overflow-y-auto h-full bg-white">
+<div class="h-full bg-white">
     <div class="pb-4">
       <div>
         <img src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80" alt="" class="block object-cover w-full rounded-lg aspect-10/7" />
