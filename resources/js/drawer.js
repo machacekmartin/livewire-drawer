@@ -1,14 +1,9 @@
 export default () => ({
     opened: false,
-    width: 'max-w-md',
     scroll: 0,
 
-    open(component, props, width) {
+    open(component, props) {
         if (this.opened) return;
-
-        if (width) {
-            this.width = width;
-        }
 
         this.scroll = document.documentElement.scrollTop;
 
@@ -32,7 +27,6 @@ export default () => ({
         window.scrollTo(0, this.scroll);
 
         this.opened = false;
-        this.width = 'max-w-md';
 
         setTimeout(() => this.$wire.unmountComponent(), 400);
 

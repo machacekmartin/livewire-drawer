@@ -1,7 +1,7 @@
 <div
     x-data="drawer"
     x-on:close-drawer.window="close"
-    x-on:open-drawer.window="open($event.detail.component, $event.detail.props, $event.detail.width)"
+    x-on:open-drawer.window="open($event.detail.component, $event.detail.props)"
     x-on:keydown.escape.window="close"
     @foreach ($closeOnEvents as $event) x-on:{{ $event }}.window="close" @endforeach
 >
@@ -17,8 +17,7 @@
     <div
         x-cloak
         x-show="opened"
-        class="fixed z-[1000] mb-6 shadow-lg bg-white transition-all overflow-y-auto md:max-h-[calc(100%-2rem)] md:top-4 md:right-4 top-0 right-0 flex flex-col max-h-full h-screen w-full md:rounded-xl"
-        x-bind:class="width"
+        class="fixed z-[1000] mb-6 shadow-lg bg-white max-w-md transition-all overflow-y-auto md:max-h-[calc(100%-2rem)] md:top-4 md:right-4 top-0 right-0 flex flex-col max-h-full h-screen w-full md:rounded-xl"
         x-transition:enter="transition ease-in-out duration-500"
         x-transition:enter-start="md:translate-x-[calc(100%+2rem)] translate-x-full"
         x-transition:enter-end="translate-x-0"

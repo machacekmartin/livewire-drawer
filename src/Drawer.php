@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Livewire\Components;
+namespace Machacekm\LivewireDrawer;
 
 use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
+use Illuminate\View\View;
 use Livewire\Attributes\On;
 use Livewire\Component;
 use Livewire\Mechanisms\ComponentRegistry;
@@ -27,6 +28,11 @@ class Drawer extends Component
     public ?string $title = null;
 
     public array $closeOnEvents = [];
+
+    public function render(): View
+    {
+        return view('livewire-drawer::livewire.drawer');
+    }
 
     #[On(['open-drawer'])]
     public function mountComponent(string $component, array $props): void
